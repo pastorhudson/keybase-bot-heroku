@@ -81,11 +81,18 @@ then the bot has to advertise it's bot commands so keybase knows which messages 
 
 ### Startup the Bot for local DEV
 
-Next, start the service, logged in as the bot on startup:
+You need to run the Keybase service locally if you want to run bot.py
 
 ```
 $ keybase --home=/tmp/bot service --oneshot-username <botname> < paper-key
 ```
+Install Requirements
+`pip install -r requirements.txt`
+
+You'll also need to setup the same environment variables we need for Heroku or bot.py will fail.
+
+Run the bot:
+`python3 bot.py`
 
 ## Caveats
 
