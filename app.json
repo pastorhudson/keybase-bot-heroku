@@ -16,7 +16,7 @@
     },
     "KEYBASE_BOTALIAS": {
       "description": "This is an alias that will display. Use this if you couldn't get the name you wanted.",
-      "optional": "true",
+      "optional": true,
       "value": ""
     }
   },
