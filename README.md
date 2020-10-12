@@ -50,7 +50,7 @@ Set a name for your current device like "dev-bothome-folder"
 keybase chat edit-bot-member -u <botname> -r bot <team>
 ```
 
-### Set Bot Avarar Image
+### Set Bot Avatar Image
 Note: You have to have completed teh Setup Bot Home Directory Step First
 ```
 keybase -home=~/mybot/bothome account upload-avatar <image-file>
