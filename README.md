@@ -3,7 +3,7 @@ This is a simple starter bot for launching a keybase bot on Heroku or Dokku
 
 ### Setup:
 
-### Get a Bot Token
+### 1 Get a Bot Token
 
 As your keybase user run:
 
@@ -13,7 +13,7 @@ $ keybase bot token create > /tmp/bot-token
 
 You'll get back a base64 token, like: `6C37sjCBgMNf06Z6oTgixIxHJpja8G-Qp`. This is your *bot token* that allows you to sign up bots.
 
-### Signup the Bot
+### 2 Signup the Bot
 
 You can signup for your bot in a new "bot home dir" using your bot token, and by specifying the username of the bot.
 Here we use *standalone* mode which means the service and the client run in the same process, and then both exit
@@ -27,7 +27,7 @@ $ keybase --standalone --home=/tmp/bot bot signup -u <botname> -t $(cat /tmp/bot
 This will output a paper key to standard output.
 It is a paper key, and not standard device keys.
 
-### Setup Bot Home Directory and Device IMPORTANT
+### 3 Setup Bot Home Directory and Device IMPORTANT
 You can make a directory that can be used to execute commands as the bot user.
 This is needed for things like adding an avatar image.
 
@@ -45,22 +45,22 @@ Select 1 for paper key
 Paste your paper-key in the popup box.
 Set a name for your current device like "dev-bothome-folder" 
 
-### Set Bot Permissions
+### 4 Set Bot Permissions
 ```
 keybase chat edit-bot-member -u <botname> -r bot <team>
 ```
 
-### Set Bot Avatar Image
+### 5 Set Bot Avatar Image
 Note: You have to have completed teh Setup Bot Home Directory Step First
 ```
 keybase -home=~/mybot/bothome account upload-avatar <image-file>
 ```
 
-## Deploy to Heroku
+## 6 Deploy To Heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/pastorhudson/keybase-bot-heroku/tree/main)
 
-## Try your Bot
+## 7 Try Your Bot
 Use the `!update` command to cause the bot to update the alias, and advertize the commands.
 These are the included commands to get you started:
 - `!test` Responds "I'm ALIVE!"
