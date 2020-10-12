@@ -15,7 +15,6 @@ You'll get back a base64 token, like: `6C37sjCBgMNf06Z6oTgixIxHJpja8G-Qp`. This 
 
 ### 2 Signup the Bot
 
-You can signup for your bot in a new "bot home dir" using your bot token, and by specifying the username of the bot.
 Here we use *standalone* mode which means the service and the client run in the same process, and then both exit
 at the same time. It won't actually write any credentials to that directory, but we give it a non-standard home directory
 in this example so we don't pick up your real user.
@@ -28,7 +27,9 @@ This will output a paper key to standard output.
 It is a paper key, and not standard device keys.
 
 ### 3 Setup Bot Home Directory and Device IMPORTANT
-You can make a directory that can be used to execute commands as the bot user.
+
+Keybase runs as your logged in user so if you want to run commands as your bot you need a directory setup fornyour bot's keybase profile. Once we setup this directory you can run keybase commands as your bot with `keybase -home=<directory>`
+
 This is needed for things like adding an avatar image.
 
 - Make a Directory to keep your paper-key and bothome directory
@@ -42,21 +43,29 @@ This is needed for things like adding an avatar image.
 directory reusable for managing your bot moving forward
 `keybase -home=./bothome login`
 Select 1 for paper key
-Paste your paper-key in the popup box.
+Paste your paper-key we generated in Step 2 in the popup box.
 Set a name for your current device like "dev-bothome-folder" 
 
 ### 4 Set Bot Permissions
+
+This tells keybase who can use your bot.
 ```
 keybase chat edit-bot-member -u <botname> -r bot <team>
 ```
 
 ### 5 Set Bot Avatar Image
-Note: You have to have completed teh Setup Bot Home Directory Step First
+Note: You have to have completed Step 3 for this to work.
 ```
 keybase -home=~/mybot/bothome account upload-avatar <image-file>
 ```
 
 ## 6 Deploy To Heroku
+You will need 2 things to deploy
+- Your Paper Key
+- Your Bot Name
+- Optional: Bot Alias
+
+If you have these ready then click the button below!
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/pastorhudson/keybase-bot-heroku/tree/main)
 
