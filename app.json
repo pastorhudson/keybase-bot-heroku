@@ -6,21 +6,29 @@
   "keywords": ["keybase", "bot", "python", "heroku"],
 
   "env": {
-    "SECRET_TOKEN": {
-      "description": "A secret key for verifying the integrity of signed cookies.",
-      "generator": "secret"
+    "KEYBASE_PAPERKEY": {
+      "description": "This is the paperkey for your bot.",
+      "value": ""
     },
-    "WEB_CONCURRENCY": {
-      "description": "The number of processes to run.",
-      "value": "5"
+    "KEYBASE_BOTNAME": {
+      "description": "This is the name of your keybase bot.",
+      "value": ""
+    },
+    "KEYBASE_BOTALIAS": {
+      "description": "This is an alias that will display. Use this if you couldn't get the name you wanted.",
+      "value": ""
     }
   },
   "buildpacks": [
     {
-      "url": "https://github.com/pastorhudson/keybase-client-buildpack"
-    },
-    {
-      "url": "https://github.com/heroku/heroku-buildpack-python"
+      "url": "https://github.com/stomita/heroku-buildpack-phantomjs"
     }
   ],
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": "bundle exec rake test"
+      }
+    }
+  }
 }
