@@ -60,6 +60,16 @@ keybase -home=~/mybot/bothome account upload-avatar <image-file>
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/pastorhudson/keybase-bot-heroku/tree/main)
 
+## Try your Bot
+Use the `!update` command to cause the bot to update the alias, and advertize the commands.
+These are the included commands to get you started:
+- `!test` Responds "I'm ALIVE!"
+- `!joke` Tells a joke from pyjoke
+- `!help` Prints out the commands it can do
+- `!update` Updates the commands advertised for the bot. 
+This is very important! If you add a bot to a team and select "Restricted Bot" 
+then the bot has to advertise it's bot commands so keybase knows which messages to encrypt with the bot's keys.
+
 ### Startup the Bot for local DEV
 
 Next, start the service, logged in as the bot on startup:
