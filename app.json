@@ -4,7 +4,6 @@
   "repository": "https://github.com/pastorhudson/keybase-bot-heroku",
   "logo": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Keybase_logo_official.svg",
   "keywords": ["keybase", "bot", "python", "heroku"],
-
   "env": {
     "KEYBASE_PAPERKEY": {
       "description": "This is the paperkey for your bot.",
