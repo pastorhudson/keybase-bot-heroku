@@ -15,7 +15,7 @@
       "value": ""
     },
     "KEYBASE_BOTALIAS": {
-      "description": "This is an alias that will display. Use this if you couldn't get the name you wanted.",
+      "description": "This is an alias that will display. Use this if you couldn't get the bot name you wanted. It will be applied with the !update command.",
       "value": "",
       "required": false
     }
