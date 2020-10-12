@@ -27,5 +27,15 @@
     {
       "url": "https://github.com/heroku/heroku-buildpack-python"
     }
-  ]
+  ],
+  "formation": {
+    "web": {
+      "quantity": 0,
+      "size": "free"
+    },
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
 }
