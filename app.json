@@ -11,13 +11,13 @@
       "value": ""
     },
     "KEYBASE_BOTNAME": {
-      "description": "This is the name of your keybase bot.",
+      "description": "This is the name of your keybase bot that you setup in the step 'Sign Up The Bot'",
       "value": ""
     },
     "KEYBASE_BOTALIAS": {
       "description": "This is an alias that will display. Use this if you couldn't get the name you wanted.",
       "value": "",
-      "required": "false"
+      "required": false
     }
   },
   "buildpacks": [
@@ -29,10 +29,6 @@
     }
   ],
   "formation": {
-    "web": {
-      "quantity": 0,
-      "size": "free"
-    },
     "worker": {
       "quantity": 1,
       "size": "free"
