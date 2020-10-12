@@ -58,7 +58,7 @@ keybase -home=~/mybot/bothome account upload-avatar <image-file>
 
 ## Deploy to Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/heroku/node-js-getting-started/tree/master)
 
 ### Startup the Bot for local DEV
 
