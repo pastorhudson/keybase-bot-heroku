@@ -4,7 +4,7 @@
   "repository": "https://github.com/pastorhudson/keybase-bot-heroku",
   "logo": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Keybase_logo_official.svg",
   "keywords": ["keybase", "bot", "python", "heroku"],
-  "addons": [],
+  "addons": null,
   "buildpacks": [
     {
       "url": "https://github.com/pastorhudson/keybase-client-buildpack.git"
