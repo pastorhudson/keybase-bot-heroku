@@ -30,24 +30,24 @@ async def handler(bot, event):
             bot, channel: chat1.ChatChannel, message_id: int
     ) -> chat1.SendRes:
         await bot.ensure_initialized()
-        res = await bot.chat.execute(
-            {
-                "method": "advertisecommands",
-                "params": {
-                    "options": {
-                        "alias": f"{os.environ.get('KEYBASE_BOTALIAS')}",
-                        "advertisements": [
-                            {"type": "public",
-                             "commands": [
-                                 {"name": "help",
-                                  "description": "Get help using this bot"},
-                                 {"name": "joke",
-                                  "description": "Forces me to tell a programing oriented joke."},
-                                 {"name": "test",
-                                  "description": "Just tests to see if I'm alive."},
-                             ]}]}}}
+        payload = {
+            "method": "advertisecommands",
+            "params": {
+                "options": {
+                    "advertisements": [
+                        {"type": "public",
+                         "commands": [
+                             {"name": "help",
+                              "description": "Get help using this bot"},
+                             {"name": "joke",
+                              "description": "Forces me to tell a programing oriented joke."},
+                             {"name": "test",
+                              "description": "Just tests to see if I'm alive."},
+                         ]}]}}}
+        if os.environ.get('KEYBASE_BOTALIAS') != "":
+            payload['params']['options']['alias'] = os.environ.get('KEYBASE_BOTALIAS')
 
-        )
+        res = await bot.chat.execute(payload)
 
     if event.msg.content.type_name != chat1.MessageTypeStrings.TEXT.value:
         return
